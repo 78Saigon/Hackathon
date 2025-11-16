@@ -1,0 +1,61 @@
+﻿@model TPLOCAL1.Models.FormModel
+
+<html>
+
+    <head>
+        <title>Page de validation</title>
+        <link rel="stylesheet" href="Index.css" />
+    </head>
+
+    <body>
+
+        <header>
+            <img src="GroupeHN.png" class="image" alt="GroupeHN" />
+            <h1>Page de validation</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="Index.html">Accueil</a></li>
+                <li><a href="Presentation.html">Présentation</a></li>
+                <li><a href="EditionsPrecedentes.html">Éditions précédentes</a></li>
+            </ul>
+        </nav>
+
+        <section>
+
+            <p>Votre formulaire a bien été pris en compte</p>
+        
+                <table>
+                    <caption>Informations personelles</caption>
+                    <tr>
+                        <td>Nom</td>
+                        <td> @Model.LastName </td>
+
+                    </tr>
+                    <tr>
+                        <td>Prénom</td>
+                        <td> @Model.FirstName </td>
+                    </tr>
+     
+                    <tr>
+                        <td>Adresse e-mail</td>
+                        <td> @Model.Mail </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>Rôle</td>
+                        <td> @Model.Role </td>
+
+                    </tr>
+
+                </table>
+
+            
+        </section>
+
+
+    </body>
+
+</html>

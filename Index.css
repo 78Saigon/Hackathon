@@ -1,0 +1,73 @@
+﻿
+body {
+    background-color: rgba(76, 27, 92, 0.4);
+    font-family: Arial, Helvetica, sans-serif;    
+    color: white;
+}
+
+
+.image {
+    margin-left: 1rcap;
+    margin-right: 2cap;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+p {
+    margin-right: 5%;
+}
+
+h1 {   
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav {
+    background-image: url("fond_hn.png");
+    background-color: rgba(0, 0, 0, 0.2);
+    background-blend-mode: darken;
+    float: left;
+    height: 600px;
+    width: 220px;
+    border: 2px solid #8c014c;
+    background-color: #8c014c;
+    color: white;
+    margin-right: 20px;
+}
+
+li, caption {
+    margin-top: 10px;
+    margin-bottom: 5px;    
+}
+
+a {
+    color: chocolate;
+}
+
+section {
+    margin-left: 170px;
+}
+
+table {
+    border: 1px solid black;
+    min-width: 150px;    
+    border-collapse: collapse;
+    background-color: white;   
+}
+
+caption {
+    color: white;
+}
+
+td {
+    border: 1px solid black;
+    min-width: 100px;
+    max-width: 210px;
+    padding: 5px;
+    color: black;
+}
+
+.erreur{
+    color: red;
+}
