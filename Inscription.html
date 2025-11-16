@@ -8,7 +8,7 @@
     <head>
         <title>Hackathon HN Intercontrats</title>        
         
-    </head>
+    </head> 
 
     <body>
 
@@ -16,7 +16,7 @@
             <img src="GroupeHN.png" class="image" alt="GroupeHN" />
             <h1>Formulaire</h1>
         </header>
-
+    
         <nav>
             <ul>
                 <li><a href="Index.html">Accueil</a></li>
@@ -32,65 +32,45 @@
 
         </section>
 
-        <section>
+        <div class="inscription">
 
-            <form action="ValidationFormulaire.html"
-                    method="post">
-
-                <table>
-                    <caption>Informations d'inscription</caption>
-                    <tr>
-                        <td>Nom</td>
-                        <td><input asp-for="LastName" type="text" required /> <span asp-validation-for="LastName" class="erreur"></span> </td>
-
-                    </tr>
-                    <tr>
-                        <td>Prénom</td>
-                        <td><input asp-for="FirstName" type="text" required /> <span asp-validation-for="FirstName" class="erreur"></span></td>
-                    </tr>
-                    <tr>
-                        <td>Adresse e-mail</td>
-                        <td><input type="email" asp-for="Mail" required /> <span asp-validation-for="Mail" class="erreur"></span> </td>
-
-                    </tr>
-                    <tr>
-                        <td>Rôle</td>
-                        <td>
-                            <select asp-for="Role" required> 
-                                <option value="">Sélectionner un rôle</option>
-                                    <option value="Front">Développement Front-end</option>
-                                    <option value="Back">Développement Back-end</option>
-                                    <option value="Full">Développement Fullstack</option>
-                                    <option value="ChefProjet">Chef(fe) de projet</option>
-                            </select>
-                            <span asp-validation-for="Role" class="erreur"></span>
-                          
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Compétences</td>
-                        <td>                           
-                            <input type="checkbox" /> <label for="c#">C#</label>
-                            <input type="checkbox" /> <label for="js">JavaScript</label>
-                            <input type="checkbox" /> <label for="angular">Angular</label>
-                            <input type="checkbox" /> <label for="cobol">COBOL</label>
-                            <input type="checkbox" /> <label for="python">Python</label>
-                                                                                     
-                        </td>
-
-                    </tr>
-
-                </table><br>
-
-                <input type="submit" value="Valider" onclick="confirmer()" />
+            <form action="ValidationFormulaire.html" method="post">
                 
+                <h2>Informations d'inscription</h2>                                            
+                    <input asp-for="LastName" type="text" placeholder="Nom" required /> 
+                <br>  
+                    <input asp-for="FirstName" type="text" placeholder="Prénom" required /> 
+                <br>                        
+                    <input type="email" asp-for="Mail" placeholder="Mail" required /> 
+                <br>                        
+                    <select asp-for="Role" required> 
+                        <option value="">Sélectionner un rôle</option>
+                            <option value="Front">Développement Front-end</option>
+                            <option value="Back">Développement Back-end</option>
+                            <option value="Full">Développement Fullstack</option>
+                            <option value="ChefProjet">Chef(fe) de projet</option>
+                    </select>
+                    <span asp-validation-for="Role" class="erreur"></span>                                        
+                <br>              
+                    <p class="comp">Compétences</p>                               
+                    <input type="checkbox" /> <label for="c#">C#</label>
+                    <input type="checkbox" /> <label for="js">JavaScript</label>
+                    <input type="checkbox" /> <label for="angular">Angular</label>
+                    <input type="checkbox" /> <label for="cobol">COBOL</label>
+                    <input type="checkbox" /> <label for="python">Python</label>  
+                <br>
+
+                <br>
+
+                <input type="submit" value="Envoyer" onclick="confirmer()" />
+
                 <script>
                     function confirmer() {confirm("Veuillez confirmer votre inscription");}
                 </script>
 
             </form>
 
-        </section>
+        </div>
 
     </body>
 </html>
