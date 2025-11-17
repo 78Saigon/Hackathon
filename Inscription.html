@@ -1,76 +1,117 @@
-﻿@model TPLOCAL1.Models.FormModel
-
+<!-- @model TPLOCAL1.Models.FormModel -->
 
 <html>
 
 <link rel="stylesheet" href="Index.css" />
 
-    <head>
-        <title>Hackathon HN Intercontrats</title>        
-        
-    </head> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon HN Intercontrats</title>
 
-    <body>
+</head>
 
-        <header>
-            <img src="GroupeHN.png" class="image" alt="GroupeHN" />
-            <h1>Formulaire</h1>
-        </header>
-    
-        <nav>
-            <ul>
-                <li><a href="Index.html">Accueil</a></li>
-                <li><a href="Presentation.html">Présentation</a></li>               
-                <li><a href="EditionsPrecedentes.html">Éditions précédentes</a></li>
-            </ul>
-        </nav>
+<body>
 
-        <section>
-                        
-            <h2>Inscription</h2>
-            <p>Vous pouvez vous inscrire en remplissant le formulaire suivant. Les équipes seront formées automatiquement pour qu'elles soient équilibrées.</p>
+    <header>
+        <img src="GroupeHN.png" class="image" alt="GroupeHN" />
+        <h1>Formulaire</h1>
+    </header>
 
-        </section>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Accueil</a></li>
+            <li><a href="Presentation.html">Présentation</a></li>
+            <li><a href="EditionsPrecedentes.html">Éditions précédentes</a></li>
+        </ul>
+    </nav>
+
+    <section>
+
+        <h2>Inscription</h2>
+        <p>Vous pouvez vous inscrire en remplissant le formulaire suivant. Les équipes seront formées automatiquement
+            pour qu'elles soient équilibrées.</p>
+
+    </section>
+
+    <section class="section_insc">
 
         <div class="inscription">
 
-            <form action="ValidationFormulaire.html" method="post">
-                
-                <h2>Informations d'inscription</h2>                                            
-                    <input asp-for="LastName" type="text" placeholder="Nom" required /> 
-                <br>  
-                    <input asp-for="FirstName" type="text" placeholder="Prénom" required /> 
-                <br>                        
-                    <input type="email" asp-for="Mail" placeholder="Mail" required /> 
-                <br>                        
-                    <select asp-for="Role" required> 
-                        <option value="">Sélectionner un rôle</option>
-                            <option value="Front">Développement Front-end</option>
-                            <option value="Back">Développement Back-end</option>
-                            <option value="Full">Développement Fullstack</option>
-                            <option value="ChefProjet">Chef(fe) de projet</option>
-                    </select>
-                    <span asp-validation-for="Role" class="erreur"></span>                                        
-                <br>              
-                    <p class="comp">Compétences</p>                               
-                    <input type="checkbox" /> <label for="c#">C#</label>
-                    <input type="checkbox" /> <label for="js">JavaScript</label>
-                    <input type="checkbox" /> <label for="angular">Angular</label>
-                    <input type="checkbox" /> <label for="cobol">COBOL</label>
-                    <input type="checkbox" /> <label for="python">Python</label>  
+            <!-- <form action="ValidationFormulaire.html" method="post"> -->
+            <form class="form" id="myForm">
+
+                <h2>Informations d'inscription</h2>
+                <label for="nom">Nom</label>
+                <input type="text" name="nom" placeholder="Nom" required />
+                <br>
+                <input type="text" name="prenom" placeholder="Prénom" required />
+                <br>
+                <input type="email" name="email" placeholder="Mail" required />
+                <br>
+                <select aria-label="role" required>
+                    <option value="">Sélectionner un rôle</option>
+                    <option value="Front">Développement Front-end</option>
+                    <option value="Back">Développement Back-end</option>
+                    <option value="Full">Développement Fullstack</option>
+                    <option value="ChefProjet">Chef(fe) de projet</option>
+                </select>
+                </span>
+                <br>
+                <p class="comp">Compétences</p>
+                <input type="checkbox" id="c#" name="c#" /> <label for="c#">C#</label>
+                <input type="checkbox" id="js" name="js" /> <label for="js">JavaScript</label>
+                <input type="checkbox" id="angular" name="angular" /> <label for="angular">Angular</label>
+                <input type="checkbox" id="cobol" name="cobol" /> <label for="cobol">COBOL</label>
+                <input type="checkbox" id="python" name="python" /> <label for="python">Python</label>
                 <br>
 
                 <br>
 
-                <input type="submit" value="Envoyer" onclick="confirmer()" />
-
-                <script>
-                    function confirmer() {confirm("Veuillez confirmer votre inscription");}
-                </script>
+                <input type="submit" value="Envoyer" />
+                <!-- function confirmer() { confirm("Veuillez confirmer votre inscription"); }  -->
 
             </form>
 
+            <script>
+                const myForm = document.getElementById('myForm');
+
+                myForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const formData = new FormData(this);
+                    console.log(formData);
+
+                    fetch("http://localhost:8080/participants", {
+                        method: "POST",
+                        body: JSON.stringify({
+                            userId: 1,
+                            title: "Participants",
+                            name: LastName,
+                            first_name: FirstName,
+                            mail: Mail,
+                            role: Role,
+                            competences: Competence,
+                            completed: false
+                        }),
+                        headers: {
+                            "Content-type": "application/json; charset=UTF-8"
+                        }
+                    })
+                        .then((response) => response.json())
+                        .then((json) => console.log(json))
+                        .catch(error => console.error('Error', error));
+                })
+
+
+                    
+
+            </script>
+
         </div>
 
-    </body>
+    </section>
+
+</body>
+
 </html>
