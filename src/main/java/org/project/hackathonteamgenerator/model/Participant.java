@@ -22,7 +22,6 @@ public class Participant {
     private String nom;
     private String prenom;
     private String email;
-    private List<String> technologies;
     private String role;
 
     public String getTag() {
