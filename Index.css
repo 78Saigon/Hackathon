@@ -1,4 +1,4 @@
-﻿
+
 body {
     background-color: rgba(76, 27, 92, 0.4);
     font-family: Arial, Helvetica, sans-serif;    
@@ -59,6 +59,11 @@ section {
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;    
     padding: 10px;
+}
+
+.section_insc{
+    padding-top: 1rem;
+    place-items: center;
 }
 
 form {   
