@@ -5,9 +5,9 @@
       background-image: url('fond_hn.png');
       font-family: Arial, Helvetica, sans-serif;
       padding: 0 100px 0 100px;
-       background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
   }
 
   .container {
@@ -67,4 +67,26 @@
       height: 20px;
       vertical-align: middle;
       margin-left: 5px;
+  }
+
+  #btn {
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      color: white;
+      padding: 15px 30px;
+      margin-top: 50px;
+      border: none;
+      background-color: rgb(88, 0, 88);
+      border-radius: 10px;
+      font-size: 16px;
+  }
+
+  #btn:hover {
+      background-color: rgb(120, 0, 120);
+  }
+
+  .return {
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
