@@ -1,0 +1,44 @@
+<html>
+  <link rel="stylesheet" href="Index.css" />
+  <link rel="stylesheet" href="in.css" />
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hackathon HN - Inscription</title>
+  </head>
+  <body>
+    <form>
+      <h1>Formulaire d'inscription</h1>
+
+      <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+      <br />
+
+      <input
+        type="text"
+        id="prenom"
+        name="prenom"
+        placeholder="Votre prénom"
+        required
+      />
+      <br />
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Votre email"
+        required
+      />
+      <br />
+      <select id="role" name="role" required>
+        <option value="">Sélectionner un rôle</option>
+        <option value="Business analyste">Business analyste</option>
+        <option value="Chef de Projet">Chef de Projet</option>
+        <option value="Ingénieur sécurité">Ingénieur sécurité</option>
+        <option value="Développeur">Développeur</option>
+      </select>
+      <br />
+    </form>
+  </body>
+</html>
