@@ -1,6 +1,6 @@
 <html>
-  <link rel="stylesheet" href="Index.css" />
-  <link rel="stylesheet" href="in.css" />
+  <!-- <link rel="stylesheet" href="Index.css" /> -->
+  <link rel="stylesheet" href="inscriptionBis.css" />
 
   <head>
     <meta charset="UTF-8" />
@@ -8,37 +8,46 @@
     <title>Hackathon HN - Inscription</title>
   </head>
   <body>
-    <form>
-      <h1>Formulaire d'inscription</h1>
+    <div class="container">
+      <h1>Inscription au Hackathon HN</h1>
+      <form>
+        <input
+          type="text"
+          id="nom"
+          name="nom"
+          placeholder="Votre nom"
+          required
+        />
+        <br />
 
-      <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
-      <br />
+        <input
+          type="text"
+          id="prenom"
+          name="prenom"
+          placeholder="Votre prénom"
+          required
+        />
+        <br />
 
-      <input
-        type="text"
-        id="prenom"
-        name="prenom"
-        placeholder="Votre prénom"
-        required
-      />
-      <br />
-
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Votre email"
-        required
-      />
-      <br />
-      <select id="role" name="role" required>
-        <option value="">Sélectionner un rôle</option>
-        <option value="Business analyste">Business analyste</option>
-        <option value="Chef de Projet">Chef de Projet</option>
-        <option value="Ingénieur sécurité">Ingénieur sécurité</option>
-        <option value="Développeur">Développeur</option>
-      </select>
-      <br />
-    </form>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Votre email"
+          required
+        />
+        <br />
+        <select id="role" name="role" required>
+          <option value="">Sélectionner un rôle</option>
+          <option value="Business analyste">Business analyste</option>
+          <option value="Chef de Projet">Chef de Projet</option>
+          <option value="Ingénieur sécurité">Ingénieur sécurité</option>
+          <option value="Développeur">Développeur</option>
+        </select>
+        <br />
+        <input id="btn" type="submit" value="Envoyer" />
+      </form>
+    </div>
+    <script src="inscriptionBis.js"></script>
   </body>
 </html>
