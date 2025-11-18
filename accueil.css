@@ -1,0 +1,86 @@
+  body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('fond_hn.png');
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+  }
+
+  .block {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 100px 0 100px;
+      color: white;
+      background: transparent;
+  }
+
+  .block2 {
+      background: white;
+  }
+
+  .block3 div {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+  }
+
+  .block3 .text1 {
+      padding-top: 3%;
+      margin-bottom: auto;
+  }
+
+  .block3 .text2 {
+      margin-top: auto;
+  }
+
+  .sub-block {
+      display: flex;
+      align-items: center;
+      background-color: rgb(88, 0, 88);
+      padding: 75px;
+      border-radius: 10px;
+  }
+
+  .block2 a {
+      text-decoration: none;
+      color: white;
+  }
+
+  .header h1 {
+      margin: 0;
+      font-size: 36px;
+  }
+
+  .header p {
+      margin: 5px 0 0;
+      font-size: 18px;
+  }
+
+  .logo img {
+      width: 175px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      height: auto;
+      padding: 5px;
+      border: 1px solid rgba(255, 255, 255);
+  }
+
+  .sub-block:hover {
+      transform: scale(1.05);
+      transition: transform 0.2s ease;
+      /* léger déplacement + zoom */
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+      /* ombre douce */
+      background: linear-gradient(45deg, #e74e77, rgba(78, 40, 116, 1) 100%);
+
+      /* change le dégradé */
+      cursor: pointer;
+  }

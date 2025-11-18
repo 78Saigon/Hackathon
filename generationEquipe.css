@@ -1,0 +1,96 @@
+  body {
+      margin: 0;
+      padding: 0;
+      background-image: url('fond_hn.png');
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 0 100px 0 100px;
+      height: 100vh;
+  }
+
+  .container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+  }
+
+  .block1 {
+      color: white;
+      align-items: center;
+      border-radius: 0 0 15px 15px;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-top: none;
+  }
+
+  .grid {
+      display: grid;
+      grid-template-columns: repeat(5, 150px);
+      gap: 10px;
+  }
+
+  .item {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      text-align: center;
+      padding: 5px;
+      border-radius: 5px;
+      cursor: grab;
+  }
+
+  .order {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding: 15;
+  }
+
+  .team-size {
+      padding: 15;
+  }
+
+  .btn {
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      background-color: rgb(88, 0, 88);
+      border-radius: 10px;
+  }
+
+  .btn:hover {
+      transform: scale(1.05);
+      /* léger déplacement + zoom */
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+      /* ombre douce */
+      background: linear-gradient(45deg, #e74e77, rgba(78, 40, 116, 1) 100%);
+
+      /* change le dégradé */
+      cursor: pointer;
+  }
+
+  #teams {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+      gap: 15px;
+      margin: 15px;
+  }
+
+  .team {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: rgba(249, 249, 249, 0.1);
+      color: white;
+      backdrop-filter: blur(2px);
+  }
+
+  .team h3 {
+      margin: 0 0 10px;
+  }
+
+  .radios {
+      display: flex;
+      gap: 15px;
+  }

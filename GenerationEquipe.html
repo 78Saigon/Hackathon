@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HN - Générateur d'équipe</title>
+    <link rel="stylesheet" href="generationEquipe.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form class="block1">
+        <div class="order">
+          <label for="grid">Structure d'equipe / priorité : </label>
+          <div id="grid" class="grid">
+            <div class="item" data-id="Développeur">Développeur</div>
+            <div class="item" data-id="Ingénieur sécurité">
+              Ingénieur sécurité
+            </div>
+            <div class="item" data-id="Business analyste">
+              Business analyste
+            </div>
+            <div class="item" data-id="Chef de Projet">Chef de Projet</div>
+          </div>
+        </div>
+
+        <div class="team-size">
+          <div class="radios">
+            <label for="teamSize">Taille de l'équipe : </label>
+            <label>
+              <input type="radio" name="teamSize" value="2" />
+              2</label
+            >
+
+            <label>
+              <input type="radio" name="teamSize" value="3" checked />
+              3</label
+            >
+
+            <label>
+              <input type="radio" name="teamSize" value="4" />
+              4</label
+            >
+          </div>
+        </div>
+
+        <input class="btn" type="submit" value="Générer les équipes" />
+      </form>
+      <div class="block2">
+        <div id="teams"></div>
+      </div>
+    </div>
+
+    <script src="generationEquipe.js" type="module"></script>
+  </body>
+</html>
